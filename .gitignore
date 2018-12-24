@@ -1,0 +1,4 @@
+/bin
+Gemfile.lock
+.bundle
+db/schema.rb

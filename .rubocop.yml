@@ -1,0 +1,12 @@
+Metrics/LineLength:
+  Max: 140
+AllCops:
+  Exclude:
+    - 'spec/*'
+    - 'Gemfile'
+MethodLength:
+  Max: 35
+Metrics/AbcSize:
+  Enabled: false
+BlockLength:
+  Max: 70

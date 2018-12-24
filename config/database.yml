@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  pool: 5
+
+development:
+  <<: *default
+  database: phschool_development
+  password: Ushuaia2
+
+test:
+  <<: *default
+  database: phschool_test
+  password: Ushuaia2
+
+production:
+  <<: *default
+  database: phschool_production
+  password: Ushuaia2
