@@ -2,6 +2,10 @@
 class ApplicationController < Sinatra::Base
   helpers ApplicationHelper
 
+  configure :development do
+    register Sinatra::Reloader
+  end
+
   set :server, %w[puma]
   set :root, File.dirname(__FILE__)
 

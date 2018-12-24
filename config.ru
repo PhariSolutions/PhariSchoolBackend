@@ -1,6 +1,7 @@
 # config.ru
 require 'byebug'
 require 'sinatra/base'
+require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
 # pull in the helpers and controllers

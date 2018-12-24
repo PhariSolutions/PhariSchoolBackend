@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Sinatra for web handling
 gem 'sinatra', '~> 2.0', '>= 2.0.5'
+# Collection of useful Sinatra extensions
+gem 'sinatra-contrib', '~> 2.0', '>= 2.0.5'
 # Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications
 gem 'puma', '~> 3.12'
 # Databases on Rails. Build a persistent domain model by mapping database tables to Ruby classes.
