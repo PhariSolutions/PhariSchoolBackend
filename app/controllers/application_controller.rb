@@ -2,11 +2,8 @@
 class ApplicationController < Sinatra::Base
   helpers ApplicationHelper
 
-  # set folder for templates to ../views, but make the path absolute
-  # set :views, File.expand_path('../../views', __FILE__)
   set :server, %w[puma]
   set :root, File.dirname(__FILE__)
-  # set :run, false
 
   configure :development do
     set :database, adapter: 'postgresql',
@@ -24,6 +21,15 @@ class ApplicationController < Sinatra::Base
                    pool: 2,
                    username: 'your_username',
                    password: 'your_password'
+  end
+
+  after do
+    response.body = response.body.to_json
+    response.headers['Content-Type'] = 'application/json'
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Credentials'] = 'true'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
   end
 
   # don't enable logging when running tests

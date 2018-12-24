@@ -12,3 +12,10 @@ gem 'sinatra-activerecord', '~> 2.0', '>= 2.0.13'
 gem 'rake', '~> 12.3', '>= 12.3.2'
 # Pg is the Ruby interface to the PostgreSQL RDBMS. It works with PostgreSQL 9.2 and later.
 gem 'pg', '~> 1.1', '>= 1.1.3'
+# This is a JSON implementation as a Ruby extension in C.
+gem 'json', '~> 2.1'
+
+group :development do
+  # Byebug is a Ruby debugger. It's implemented using the TracePoint C API for execution control and the Debug Inspector C API for call stack navigation.
+  gem 'byebug', '~> 10.0', '>= 10.0.2'
+end

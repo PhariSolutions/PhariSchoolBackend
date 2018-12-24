@@ -2,3 +2,6 @@
 Gemfile.lock
 .bundle
 db/schema.rb
+shared/pids/puma.state
+shared/pids/puma.pid
+.byebug_history
