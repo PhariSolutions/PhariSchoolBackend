@@ -2,19 +2,21 @@ default: &default
   adapter: postgresql
   encoding: unicode
   username: postgres
+  host: localhost
+  port: 5432
   pool: 5
 
 development:
   <<: *default
   database: phschool_development
-  password: Ushuaia2
+  password: postgres
 
 test:
   <<: *default
   database: phschool_test
-  password: Ushuaia2
+  password: postgres
 
 production:
   <<: *default
   database: phschool_production
-  password: Ushuaia2
+  password: postgres

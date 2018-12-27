@@ -21,3 +21,8 @@ group :development do
   # Byebug is a Ruby debugger. It's implemented using the TracePoint C API for execution control and the Debug Inspector C API for call stack navigation.
   gem 'byebug', '~> 10.0', '>= 10.0.2'
 end
+
+group :test do
+  # BDD for Ruby
+  gem 'rspec', '~> 3.8'
+end
